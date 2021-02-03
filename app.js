@@ -20,7 +20,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-mongoose.connect("mongodb+srv://Meenakshi16:Taliking@420@cluster0.sfadn.mongodb.net/todolistDB?retryWrites=true&w=majority", {
+mongoose.connect(process.env.URL, {
   useUnifiedTopology: true,
   useNewUrlParser: true
 });
